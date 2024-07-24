@@ -11,6 +11,6 @@ const totalMinute = hour * 60 + minute + duration;
 const resultHour = Math.floor(totalMinute / 60);
 const resultMinute = totalMinute % 60;
 
-const time = `${resultHour > 23 ? resultHour - 24 : resultHour} ${resultMinute}`;
+const time = `${resultHour > 23 ? resultHour % 24 : resultHour} ${resultMinute}`;
 
 console.log(time);
